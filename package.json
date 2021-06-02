@@ -1,0 +1,41 @@
+{
+  "name": "platzivideos-backend",
+  "version": "1.0.0",
+  "description": "PlatziVideos API built in Node.js",
+  "main": "index.js",
+  "scripts": {
+    "dev": "cross-env DEBUG=app:* nodemon index",
+    "start": "cross-env NODE_ENV=production node index",
+    "prepare": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoseGutierrez02/PlatziVideos-Backend.git"
+  },
+  "keywords": [
+    "Node.js"
+  ],
+  "author": "Jose Gutierrez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JoseGutierrez02/PlatziVideos-Backend/issues"
+  },
+  "homepage": "https://github.com/JoseGutierrez02/PlatziVideos-Backend#readme",
+  "dependencies": {
+    "cross-env": "^7.0.3",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.27.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "husky": "^6.0.0",
+    "lint-staged": "^11.0.0",
+    "nodemon": "^2.0.7",
+    "prettier": "^2.3.0"
+  },
+  "lint-staged": {
+    "*.js": "eslint --cache --fix"
+  }
+}
