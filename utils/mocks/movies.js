@@ -153,6 +153,11 @@ const moviesMock = [
   }
 ];
 
+const filteredMoviesMock = (tag) => {
+  return moviesMock.filter(movie => movie.tags.includes(tag));
+};
+
 module.exports = {
-  moviesMock
+  moviesMock,
+  filteredMoviesMock,
 };
