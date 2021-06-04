@@ -7,6 +7,8 @@
     "dev": "cross-env DEBUG=app:* nodemon index",
     "start": "cross-env NODE_ENV=production node index",
     "test": "mocha --exit",
+    "cover": "nyc npm run test",
+    "report": "nyc report --reporter=html && wslview coverage/index.html",
     "prepare": "husky install"
   },
   "repository": {
@@ -46,5 +48,14 @@
   },
   "lint-staged": {
     "*.js": "eslint --cache --fix"
+  },
+  "nyc": {
+    "all": true,
+    "include": [
+      "routes",
+      "services",
+      "lib",
+      "utils"
+    ]
   }
 }
