@@ -9,6 +9,8 @@
     "test": "mocha --exit",
     "cover": "nyc npm run test",
     "report": "nyc report --reporter=html && wslview coverage/index.html",
+    "docker:build": "docker build . -t platzivideos-api",
+    "docker:run": "docker run -p 3001:3001 -d platzivideos-api",
     "prepare": "husky install"
   },
   "repository": {
