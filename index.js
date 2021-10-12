@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const { config } = require('./config');
 const moviesApi = require('./routes/movies');
+const userMoviesApi = require('./routes/userMovies');
 const {
   logErrors,
   wrapError,
@@ -14,6 +15,7 @@ app.use(express.json());
 
 // routes
 moviesApi(app);
+userMoviesApi(app);
 
 // not found handler
 app.use(notFoundHandler);
