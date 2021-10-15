@@ -3,11 +3,11 @@ const { BasicStrategy } = require('passport-http');
 const boom = require('@hapi/boom');
 const bcrypt = require('bcryptjs');
 
-const UserService = require('../../../services/user');
+const UsersService = require('../../../services/user');
 
 passport.use(
   new BasicStrategy(async (email, password, cb) => {
-    const userService = new UserService();
+    const userService = new UsersService();
 
     try {
       const user = await userService.getUser({ email });
