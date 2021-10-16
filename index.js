@@ -3,6 +3,7 @@ const app = express();
 const { config } = require('./config');
 const moviesApi = require('./routes/movies');
 const userMoviesApi = require('./routes/userMovies');
+const authMoviesApi = require('./routes/auth');
 const {
   logErrors,
   wrapError,
@@ -14,6 +15,7 @@ const notFoundHandler = require('./utils/middleware/notFoundHandler');
 app.use(express.json());
 
 // routes
+authMoviesApi(app);
 moviesApi(app);
 userMoviesApi(app);
 
