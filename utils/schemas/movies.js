@@ -9,6 +9,7 @@ const movieCoverSchema = joi.string().uri();
 const movieDescriptionSchema = joi.string().max(300);
 const movieDurationSchema = joi.number().min(1).max(300);
 const movieContentRatingSchema = joi.string().max(5);
+const movieCategorySchema = joi.string().max(50);
 const movieSourceSchema = joi.string().uri();
 const movieTagsSchema = joi.array().items(joi.string().max(50));
 
@@ -19,6 +20,7 @@ const createMovieSchema = joi.object({
   description: movieDescriptionSchema.required(),
   duration: movieDurationSchema.required(),
   contentRating: movieContentRatingSchema.required(),
+  category: movieCategorySchema.required(),
   source: movieSourceSchema.required(),
   tags: movieTagsSchema,
 });
@@ -30,6 +32,7 @@ const updateMovieSchema = joi.object({
   description: movieDescriptionSchema,
   duration: movieDurationSchema,
   contentRating: movieContentRatingSchema,
+  category: movieCategorySchema,
   source: movieSourceSchema,
   tags: movieTagsSchema,
 });
