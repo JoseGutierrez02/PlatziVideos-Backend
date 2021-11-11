@@ -12,8 +12,6 @@ const scopesValidationHandler = (allowedScopes) => {
 
     const hasAccess = !permisions.includes(false);
 
-    console.log();
-
     if (hasAccess) {
       next();
     } else {

@@ -54,7 +54,9 @@ const userMoviesApi = (app) => {
         });
         res.status(201).json({
           data: createdUserMovieId,
-          message: 'user movie created',
+          message: createdUserMovieId 
+            ? 'user movie created' 
+            : 'movie already exists',
         });
       } catch (error) {
         next(error);
