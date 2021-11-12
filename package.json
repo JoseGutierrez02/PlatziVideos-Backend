@@ -27,7 +27,7 @@
   },
   "homepage": "https://github.com/JoseGutierrez02/PlatziVideos-Backend#readme",
   "dependencies": {
-    "@hapi/boom": "^9.1.2",
+    "@hapi/boom": "^9.1.4",
     "@hapi/joi": "^17.1.1",
     "bcryptjs": "^2.4.3",
     "cross-env": "^7.0.3",
